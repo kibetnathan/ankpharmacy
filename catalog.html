@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/27013879fb.js"
       crossorigin="anonymous"
     ></script>
-    <title>Catalogue - ANKPharmacy</title>
+    <title>Order - ANKPharmacy</title>
   </head>
 
   <body
@@ -53,10 +53,63 @@
       </div>
     </nav>
     <main class="w-[100%] m-auto py-[3vh] bg-[#ddedef] flex flex-col">
-      <h2 class="text-5xl font-bold text-[#273037] m-auto w-fit">Catalogue</h2>
-      <h3 class="text-3xl text-[#273037] w-fit m-auto">OTC</h3>
+      <h2 class="text-5xl font-bold text-[#273037] m-auto w-fit">Order your meds</h2>
+
       <!-- By Prescription -->
-       <!-- Skincare section -->
+      <h3 class="text-3xl text-[#273037] w-fit mx-auto my-20">Prescription assistance</h3>
+      <!-- prescription form -->
+         <div
+          class="flex flex-col w-[50%] mx-auto p-[10vh] bg-[#273037] rounded-[25px]"
+        >
+          <form
+            class="text-[#EFF7F8] flex justify-center"
+            action="/submit"
+            method="post"
+            autocomplete="on"
+          >
+            <fieldset>
+              <legend class="w-fit mx-auto text-3xl text-[#EFF7F8] mb-5">
+                Share your prescription with us and our team will be there to help you.
+              </legend>
+              <label for="name">Your Name</label> <br />
+              <input
+                class="bg-[#EFF7F8] rounded-xl"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+              <br /><br>
+              <label for="email">Your Email Address</label> <br />
+              <input
+                class="bg-[#EFF7F8] rounded-xl"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+              <br /><br>
+              <label for="email">Your Prescription typed</label> <br />
+              <textarea
+                class="bg-[#EFF7F8] rounded-xl text-[#273037] w-[37vw] h-50"
+                name="message"
+                id="message"
+              >
+ 
+                Enter a message
+            </textarea
+              ><br /><br><br>
+              <label for="upload">Upload a prescription(image or pdf)</label><br>
+              <br><br>
+              <input class="border-1 border-solid bg-white border-[#244D48] text-[#244D48] w-fit p-1 rounded-md text-lg m-auto hover:cursor-pointer hover:shadow-[0px_0px_5px_3px_#B0CDD1,inset_0_0_9px_3px_#B0CDD1] hover:bg-[#f0ffff]" type="file" name="upload" id="upload"><br>
+              <br> <br>
+              <input class="border-1 border-solid bg-white border-[#244D48] text-[#244D48] w-fit p-2 rounded-xl text-xl m-auto hover:cursor-pointer hover:shadow-[0px_0px_5px_3px_#B0CDD1,inset_0_0_9px_3px_#B0CDD1] hover:bg-[#f0ffff]" type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </div>
+        <div>
+          
+        </div>
     </main>
     <footer
       class="bg-[#244D48] text-[#EFF7F8] h-[80vh] grid grid-cols-6 grid-rows-[2fr_2fr_1fr] p-3"
