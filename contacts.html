@@ -15,9 +15,7 @@
   <body
     class="bg-[url('../assets/portrait.jpg')] bg-no-repeat bg-center bg-fixed bg-cover"
   >
-    <nav
-      class="sticky top-0 flex flex-row bg-[#244D48] w-[100%] h-[11vh] justify-between items-center text-white p-[1rem]"
-    >
+<nav class="flex flex-row bg-[#244D48] w-[100%] h-[11vh] justify-between items-center text-white p-[1rem]">
       <!-- This is the navbar-->
       <div class="h-[10vh] flex items-center">
         <img
@@ -27,29 +25,72 @@
         />
         <h2 class="text-2xl">ANKPHARMACY</h2>
       </div>
+
       <div class="">
-        <ul class="list-none p-5">
+        <ul class="hidden md:flex list-none p-5">
           <li
-            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer"
+            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition transition-discrete duration-200 ease-out"
           >
             <a href="index.html">Home</a>
           </li>
           <li
-            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer"
+            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
           >
             <a href="about.html">About Us</a>
           </li>
           <li
-            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer"
+            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
           >
             <a href="contacts.html">Contact Us</a>
           </li>
           <li
-            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer"
+            class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
           >
             <a href="catalog.html">Order</a>
           </li>
         </ul>
+        <!-- <div>
+          <a href="" class="bg-[#273037] text-white px-4 py-2 rounded "></a>
+        </div> -->
+        <div class="md:hidden">
+          <button
+            id="menu-toggle"
+            class="focus:outline-none text-4xl hover:cursor-pointer"
+          >
+            ☰
+          </button>
+        </div>
+
+        <!-- Mobile View -->
+        <div
+          id="mobile-menu"
+          class="hidden absolute right-3 top-21 bg-[#273037] w-fit mt-2 me-2 py-4 rounded-md"
+        >
+          <ul
+            class="flex flex-col items-center list-none p-5 text-white space-y-4 px-4 py-2"
+          >
+            <li
+              class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition transition-discrete duration-200 ease-out"
+            >
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
+            >
+              <a href="about.html">About Us</a>
+            </li>
+            <li
+              class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
+            >
+              <a href="contacts.html">Contact Us</a>
+            </li>
+            <li
+              class="inline-block px-2 text-lg border-box hover:border hover:border-white/30 hover:bg-white/10 hover:shadow-[inset_0_0_9px_1px_white] hover:py-3 hover:px-2 hover:rounded-2xl hover:cursor-pointer transition duration-200 ease-out"
+            >
+              <a href="catalog.html">Order</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <main class="w-[85%] m-auto py-[6vh] bg-[#ddedef]">
@@ -124,6 +165,8 @@
                 Enter a message
             </textarea
               ><br />
+              <br> <br>
+              <input class="border-1 border-solid bg-white border-[#244D48] text-[#244D48] w-fit p-2 rounded-xl text-xl m-auto hover:cursor-pointer hover:shadow-[0px_0px_5px_3px_#B0CDD1,inset_0_0_9px_3px_#B0CDD1] hover:bg-[#f0ffff]" type="submit" value="Submit">
             </fieldset>
           </form>
         </div>
@@ -207,5 +250,13 @@
         </span>
       </div>
     </footer>
+        <script>
+      document.getElementById('menu-toggle').addEventListener('click', function
+        (){
+          const mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden')
+
+        })
+    </script>
   </body>
 </html>
